@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatApp-DaculanZaragoza.Android", "ChatApp-DaculanZaragoza\ChatApp-DaculanZaragoza.Android\ChatApp-DaculanZaragoza.Android.csproj", "{3BF623E6-9EDA-4557-A73E-5AA5936C8C17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatApp_DaculanZaragoza.Android", "ChatApp-DaculanZaragoza\ChatApp-DaculanZaragoza.Android\ChatApp_DaculanZaragoza.Android.csproj", "{3BF623E6-9EDA-4557-A73E-5AA5936C8C17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatApp-DaculanZaragoza.iOS", "ChatApp-DaculanZaragoza\ChatApp-DaculanZaragoza.iOS\ChatApp-DaculanZaragoza.iOS.csproj", "{9974F39D-56A5-4207-99FF-7281FB0929F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatApp_DaculanZaragoza.iOS", "ChatApp-DaculanZaragoza\ChatApp-DaculanZaragoza.iOS\ChatApp_DaculanZaragoza.iOS.csproj", "{9974F39D-56A5-4207-99FF-7281FB0929F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatApp-DaculanZaragoza", "ChatApp-DaculanZaragoza\ChatApp-DaculanZaragoza\ChatApp-DaculanZaragoza.csproj", "{0ABFD9B7-C036-41C5-B381-61D163B269CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatApp_DaculanZaragoza", "ChatApp-DaculanZaragoza\ChatApp-DaculanZaragoza\ChatApp_DaculanZaragoza.csproj", "{0ABFD9B7-C036-41C5-B381-61D163B269CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

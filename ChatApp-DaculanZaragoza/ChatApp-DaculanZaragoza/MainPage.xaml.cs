@@ -14,5 +14,15 @@ namespace ChatApp_DaculanZaragoza
         {
             InitializeComponent();
         }
+
+        public void showhidePassword(object sender, EventArgs args)
+        {
+            LoginPassword.IsPassword = LoginPassword.IsPassword ? false : true;
+        }
+
+        private void toSignUp(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new SignUp());
+        }
     }
 }

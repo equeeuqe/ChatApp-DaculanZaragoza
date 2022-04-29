@@ -4,7 +4,10 @@ using System.Linq;
 using System.Text;
 
 using Xamarin.Forms;
-using Xamarin.Android;
+using Xamarin.Essentials;
+using System.Drawing;
+using Android.App;
+using Android.Support.V7.App;
 
 namespace ChatApp_DaculanZaragoza.Droid
 {

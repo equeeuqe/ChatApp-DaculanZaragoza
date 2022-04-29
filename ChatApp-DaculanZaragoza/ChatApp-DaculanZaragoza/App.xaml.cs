@@ -1,7 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xamarin.
 
 namespace ChatApp_DaculanZaragoza
 {
@@ -11,7 +10,7 @@ namespace ChatApp_DaculanZaragoza
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()

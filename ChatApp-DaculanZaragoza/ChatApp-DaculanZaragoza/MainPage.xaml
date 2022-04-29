@@ -2,12 +2,133 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ChatApp_DaculanZaragoza.MainPage"
-             BackgroundColor="PeachPuff">
+             xmlns:local="clr-namespace:ChatApp_DaculanZaragoza"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             BackgroundColor="Beige">
 
-    <StackLayout>
-        <Grid>
+    <ContentPage.Resources>
+        <ResourceDictionary>
             
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <Grid Margin="20,0,20,0" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="115"></RowDefinition>
+            <RowDefinition Height="140"></RowDefinition>
+            <RowDefinition Height="0.75*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Image Source="Logo" 
+               WidthRequest="{OnPlatform iOS=300, Android=250}"
+               HorizontalOptions="Center"
+               Grid.ColumnSpan="2"
+               Grid.Row="0"/>
+        
+        <!--login credentials-->
+        <Grid Grid.Row="1" Grid.ColumnSpan="2" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="65"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!--email entry box and validation label-->
+            <Frame x:Name="EmailBorder" 
+                       Grid.ColumnSpan="2" Grid.Row="0" 
+                       CornerRadius="8" HeightRequest="50" WidthRequest="50"
+                       Padding="-5" Margin="0,0,0,0" HasShadow="True"
+                       BackgroundColor="Transparent" BorderColor="Black" 
+                       HorizontalOptions="Fill" VerticalOptions="Center">
+            </Frame>
+            <Entry x:Name="LoginEmail"
+                       Grid.ColumnSpan="2" Grid.Row="0" 
+                       Placeholder="Email" Keyboard="Email"
+                       HorizontalOptions="Fill" VerticalOptions="Center" Margin="4,0,10,0">
+                <Entry.Behaviors>
+                    <!--<xct:EmailValidationBehavior RegexPattern="@gmail.com"/>-->
+                </Entry.Behaviors>
+            </Entry>
+            
+            
+            <!--password entry box-->
+            <Frame x:Name="PasswordBorder" 
+                       Grid.ColumnSpan="2" Grid.Row="1" 
+                       CornerRadius="8" HeightRequest="50" WidthRequest="50"
+                       Padding="-5" Margin="0,0,0,5" HasShadow="True"
+                       BackgroundColor="Transparent" BorderColor="Black" 
+                       HorizontalOptions="Fill" VerticalOptions="Start">
+            </Frame>
+            <Entry x:Name="LoginPassword" IsPassword="True" 
+                        Grid.ColumnSpan="2" Grid.Row="1" 
+                        Placeholder="Password" Keyboard="Default"
+                        HorizontalOptions="Fill" VerticalOptions="Start" Margin="4,-3,75,0" />
+            <Button Grid.Column="1" Grid.Row="1" Text="Show"
+                        Padding="-10" Margin="0,6,9,0"
+                        HeightRequest="30" WidthRequest="60"
+                        VerticalOptions="Start" HorizontalOptions="End"
+                        BackgroundColor="PaleVioletRed"
+                        FontSize="13" TextTransform="None"/>
+
+            <!--forgot password-->
+            <Label Padding="0" Margin="0,2"
+                       TextColor="CornflowerBlue"
+                       Grid.ColumnSpan="2" Grid.Row="1"
+                       VerticalOptions="End" HorizontalOptions="End"
+                       >
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Forgot Password" TextDecorations="Underline">
+                            <!--<Span.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                </Span.GestureRecognizers>-->
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
         </Grid>
-    </StackLayout>
+
+        <!--sign in and sign up-->
+        <Grid Grid.Row="2" Grid.ColumnSpan="2" Margin="0,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button x:Name="SignInButton"
+                    Grid.ColumnSpan="2" Grid.Row="0" Text="Sign In"
+                    Padding="0" Margin="0"
+                    HeightRequest="45" WidthRequest="60"
+                    VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="LawnGreen"
+                    FontSize="16" TextTransform="None"/>
+            <Button x:Name="SignUpButton" Clicked="toSignUp"
+                    Grid.ColumnSpan="2" Grid.Row="1" Text="Sign Up"
+                    Padding="0" Margin="0"
+                    HeightRequest="45" WidthRequest="60"
+                    VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                    BackgroundColor="Lavender"
+                    FontSize="16" TextTransform="None"/>
+        </Grid>
+
+        <Grid Grid.Row="3" Grid.ColumnSpan="2" Margin="0,10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label  Grid.Row="0" Grid.ColumnSpan="2"
+                    Text="or" TextColor="Black" FontSize="Medium" 
+                    HorizontalOptions="Center" VerticalOptions="Start"/>
+
+            <ImageButton Grid.Row="1" Grid.Column="0" CornerRadius="5" Margin="0,10"
+                         x:Name="FacebookSignIn" Source="FacebookSignUp"
+                         HorizontalOptions="Center" VerticalOptions="Start"/>
+            <ImageButton Grid.Row="1" Grid.Column="1" CornerRadius="5" Margin="0,10"
+                         x:Name="GoogleSignIn" Source="GoogleSignIn"
+                         HorizontalOptions="Center" VerticalOptions="Start"/>
+
+
+        </Grid>   
+    </Grid>
 
 </ContentPage>
